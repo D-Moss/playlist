@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<title></title>
+</head>
+<body class="is-locked">
+	<div id="top"></div>
+
+	<!--FULLSCREEN INTRO OVERLAY-->
+	<div id="introOverlay" class="intro-overlay" role="dialog" aria-modal="true">
+		<div class="intro-overlay-content">
+			<h1 class="intro-title">Songs I keep on repeat</h1>
+			<p class="intro-subtitle">
+				A small collection of tracks I return to—steady, soulful, and grounding.
+			</p>
+
+			<div class="intro-actions">
+				<button id="openOverlay" class="intro-btn" type="button">Push to Open</button>
+			</div>
+		</div>
+	</div>
+
+	<!--NAVBAR OPEN-->
+	<div class="top-nav" id="myTopnav">
+		<div class="nav-inner">
+			<a href="#top" class="nav-logo repeat-outline" id="brandHome">ON REPEAT</a>
+			
+			<nav aria-label="Page sections">
+				<a href="#chapter-1" class="nav-link">Chapter 1</a>
+				<a href="#chapter-2" class="nav-link">Chapter 2</a>
+				<a href="#chapter-3" class="nav-link">Chapter 3</a>
+				<a href="#chapter-4" class="nav-link">Chapter 4</a>
+				<a href="#chapter-5" class="nav-link">Chapter 5</a>
+				
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i>
+				</a>
+			</nav>
+		</div>
+	</div>
+	<!--NAVBAR CLOSE-->
+
+	<!--MAIN CONTENT OPEN-->
+	<!--Chapter 1 (text left, playlist on right)-->
+	<section class="chapter" id="chapter-1">
+		<div class="row">
+			<div class=" col col-big">
+				<p class="chapter-kicker">Chapter 1</p>
+				<h2 class="chapter-title">Chapter Name</h2>
+				<p class="chapter-desc">
+					Brief explanation. 2–3 sentences max. Set the vibe and why these songs belong together.
+				</p>
+			</div>
+			<div class="col col-small">
+				<div class="playlist" aria-label="Chapter 1 playlist">
+					<a href="#" class="track" target="_blank" rel="noopener">
+						<span class="track-num">01</span>
+						<span class="track-main">
+							<span class="track-title">Song Title</span>
+							<span class="track-artist">Artist Name</span>
+						</span>
+						<span class="track-meta">
+							<span class="track-tag">Mood</span>
+							<span class="track-cta">Listen</span>
+						</span>
+					</a>
+
+					<a href="#" class="track" target="_blank" rel="noopener">
+						<span class="track-num">01</span>
+						<span class="track-main">
+							<span class="track-title">Song Title</span>
+							<span class="track-artist">Artist Name</span>
+						</span>
+						<span class="track-meta">
+							<span class="track-tag">Mood</span>
+							<span class="track-cta">Listen</span>
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--Chapter 2 (playlist on the left, text on the right)-->
+	<section class="chapter chapter--alt" id="chapter-2">
+		<div class="row">
+			<div class="col col-small">
+				<div class="playlist" aria-label="Chapter 2 playlist">
+					<a href="#" class="track" target="_blank" rel="noopener">
+						<span class="track-num">01</span>
+						<span class="track-main">
+							<span class="track-title">Song Title</span>
+							<span class="track-artist">Artist Name</span>
+						</span>
+						<span class="track-meta">
+							<span class="track-tag">Mood</span>
+							<span class="track-cta">Listen</span>
+						</span>
+					</a>
+				</div>
+			</div>
+
+			<div class="col col-big">
+				<p class="chapter-kicker">Chapter 2</p>
+				<h2 class="chapter-title">Chapter Name</h2>
+				<p class="chapter-desc">
+					Brief explanation. This one is on the right because we’re zigzagging.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!--Chapter 3 (text left, playlist on right)-->
+	<section class="chapter" id="chapter-3">
+		<div class="row">
+			<div class=" col col-big">
+				<p class="chapter-kicker">Chapter 3</p>
+				<h2 class="chapter-title">Chapter Name</h2>
+				<p class="chapter-desc">
+					Brief explanation. 2–3 sentences max. Set the vibe and why these songs belong together.
+				</p>
+			</div>
+			<div class="col col-small">
+				<div class="playlist" aria-label="Chapter 3 playlist">
+					<a href="#" class="track" target="_blank" rel="noopener">
+						<span class="track-num">01</span>
+						<span class="track-main">
+							<span class="track-title">Song Title</span>
+							<span class="track-artist">Artist Name</span>
+						</span>
+						<span class="track-meta">
+							<span class="track-tag">Mood</span>
+							<span class="track-cta">Listen</span>
+						</span>
+					</a>
+
+					<a href="#" class="track" target="_blank" rel="noopener">
+						<span class="track-num">01</span>
+						<span class="track-main">
+							<span class="track-title">Song Title</span>
+							<span class="track-artist">Artist Name</span>
+						</span>
+						<span class="track-meta">
+							<span class="track-tag">Mood</span>
+							<span class="track-cta">Listen</span>
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--Chapter 4 (playlist on the left, text on the right)-->
+	<section class="chapter chapter--alt" id="chapter-4">
+		<div class="row">
+			<div class="col col-small">
+				<div class="playlist" aria-label="Chapter 4 playlist">
+					<a href="#" class="track" target="_blank" rel="noopener">
+						<span class="track-num">01</span>
+						<span class="track-main">
+							<span class="track-title">Song Title</span>
+							<span class="track-artist">Artist Name</span>
+						</span>
+						<span class="track-meta">
+							<span class="track-tag">Mood</span>
+							<span class="track-cta">Listen</span>
+						</span>
+					</a>
+				</div>
+			</div>
+
+			<div class="col col-big">
+				<p class="chapter-kicker">Chapter 4</p>
+				<h2 class="chapter-title">Chapter Name</h2>
+				<p class="chapter-desc">
+					Brief explanation. This one is on the right because we’re zigzagging.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!--Chapter 5 (text left, playlist on right)-->
+	<section class="chapter" id="chapter-5">
+		<div class="row">
+			<div class=" col col-big">
+				<p class="chapter-kicker">Chapter 5</p>
+				<h2 class="chapter-title">Chapter Name</h2>
+				<p class="chapter-desc">
+					Brief explanation. 2–3 sentences max. Set the vibe and why these songs belong together.
+				</p>
+			</div>
+			<div class="col col-small">
+				<div class="playlist" aria-label="Chapter 5 playlist">
+					<a href="#" class="track" target="_blank" rel="noopener">
+						<span class="track-num">01</span>
+						<span class="track-main">
+							<span class="track-title">Song Title</span>
+							<span class="track-artist">Artist Name</span>
+						</span>
+						<span class="track-meta">
+							<span class="track-tag">Mood</span>
+							<span class="track-cta">Listen</span>
+						</span>
+					</a>
+
+					<a href="#" class="track" target="_blank" rel="noopener">
+						<span class="track-num">01</span>
+						<span class="track-main">
+							<span class="track-title">Song Title</span>
+							<span class="track-artist">Artist Name</span>
+						</span>
+						<span class="track-meta">
+							<span class="track-tag">Mood</span>
+							<span class="track-cta">Listen</span>
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--MAIN CONTENT CLOSE-->
+
+	<!--JAVASCRIPT-->
+	<script src="index.js"></script>
+</body>
+</html>

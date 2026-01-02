@@ -2,6 +2,7 @@ const overlay = document.getElementById("introOverlay");
 const openBtn = document.getElementById("openOverlay");
 const brandHome = document.getElementById("brandHome");
 const body = document.body;
+
 function openDoor(scrollTarget = "#myTopnav") {
 	overlay.classList.add("is-open");
 
@@ -51,3 +52,35 @@ function myFunction() {
 	const x = document.getElementById("myTopnav");
 	x.classList.toggle("responsive");
 }
+
+// --- Playlist Accordion (all chapters) ---
+const ACCORDION_MAX = 520; // <-- change this number to your preferred breakpoint
+
+document.querySelectorAll(".playlist-accordion").forEach((wrap) => {
+	const btn = wrap.querySelector(".playlist-toggle");
+	const panel = wrap.querySelector(".playlist-panel");
+
+	if (!btn || !panel) return;
+
+	btn.addEventListener("click", () => {
+		const open = wrap.classList.toggle("is-open");
+		btn.setAttribute("aria-expanded", String(open));
+
+		if (open) {
+			// Set a breakpoint so it stops and scrolls
+			panel.style.maxHeight = `${ACCORDION_MAX}px`;
+			panel.style.overflow = "auto";
+		} else {
+			panel.style.maxHeight = null;
+			panel.style.overflow = "hidden";
+		}
+	});
+
+	// Optional: keep behavior consistent on resize
+	window.addEventListener("resize", () => {
+		if (wrap.classList.contains("is-open")) {
+			panel.style.maxHeight = `${ACCORDION_MAX}px`;
+			panel.style.overflow = "auto";
+		}
+	});
+});
